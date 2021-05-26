@@ -1,6 +1,6 @@
 import ratesReturn from './ratesReturn';
 const calculator = (startObject, endObject) => {
-    console.log("calulcator running");
+    // console.log("calulcator running");
     const timeRates = ratesReturn();
 
     if (!startObject.hasOwnProperty("index") || !endObject.hasOwnProperty("index")) {
