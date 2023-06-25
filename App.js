@@ -1,6 +1,5 @@
 import React from 'react';
 import CalculatorPage from './components/CalculatorPage';
-// import type {Node} from 'react';
 import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
 const App = () => {

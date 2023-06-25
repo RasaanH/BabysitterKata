@@ -4,7 +4,7 @@ import calculator from '../functions/calculator';
 import ratesReturn from '../functions/ratesReturn';
 import {StyleSheet, View, Text} from 'react-native';
 
-const CalculatorPage = props => {
+const CalculatorPage = () => {
   const [start, setStart] = useState('');
   const [end, setEnd] = useState('');
   const timeRates = ratesReturn();
@@ -15,7 +15,6 @@ const CalculatorPage = props => {
     setEnd(endValue);
   };
   useEffect(() => {
-    //console.log("useEffect Running");
     if (!start.index || !end.index) {
       return;
     }
@@ -24,7 +23,7 @@ const CalculatorPage = props => {
       setStart(timeRates[end.index]);
       setEnd(timeRates[start.index]);
     }
-  }, [start, end]);
+  }, [start, end, timeRates]);
   let revenueString = calculator(start, end);
   return (
     <View style={styles.body}>

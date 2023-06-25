@@ -19,7 +19,7 @@ const TimeSelect = props => {
     <View style={styles.viewWrapper}>
       <Text style={styles.label}>{titleVar}</Text>
       <Picker
-        onItemChange={updateTime /*setStart*/}
+        onItemChange={updateTime}
         style={styles.pickerStyle}
         textInputStyle={styles.inputStyle}
         items={dataVar}
@@ -27,10 +27,6 @@ const TimeSelect = props => {
         placeholder="Select Time"
         item={props.current}
         isNullable
-        //backdropAnimation={{ opactity: 0 }}
-        //mode="dropdown"
-        //isNullable
-        //disable
       />
     </View>
   );
